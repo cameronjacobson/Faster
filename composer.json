@@ -1,0 +1,19 @@
+{
+	"name":"faster/faster",
+	"repositories":[
+		{	
+			"type":"git",
+			"url":"https://github.com/cameronjacobson/SimpleBinary.git"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"ext-event": "*",
+		"simplebinary/simplebinary":"@dev"
+	},
+	"autoload": {
+		"psr-0": {
+			"Faster": "src/"
+		}
+	}
+}
