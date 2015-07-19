@@ -59,9 +59,6 @@ class Connection
 
 	public function read($bev,$ctx){
 		while($record = $this->getRecord($bev)){
-			if(empty($this->connections[$record['requestId']])){
-				$this->connections[$record['requestId']] = $this->service['request']($record);
-			}
 			switch($record['type']){
 				case self::FCGI_BEGIN_REQUEST:
 					$this->connections[$record['requestId']] = $this->service['request']($record);
